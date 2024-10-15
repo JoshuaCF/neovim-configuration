@@ -3,8 +3,8 @@ vim.g.maplocalleader = "\\"
 
 require("config.lazy")
 
-require("config.autocommands")
-require("config.mappings")
 require("config.vars")
+require("config.mappings")
+require("config.autocommands")
 
 vim.cmd("colorscheme habamax")
