@@ -10,6 +10,8 @@ vim.opt.softtabstop = 4
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.opt.fileformat = "unix"
+
 vim.cmd("colorscheme habamax")
 
 vim.keymap.set("n", "<Leader>tl", function()
