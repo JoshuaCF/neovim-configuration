@@ -10,3 +10,5 @@ vim.keymap.set("n", "<Leader>X", ":bp|bd!#<CR>",
 )
 
 vim.keymap.set("n", "<ESC>", ":noh<CR>", { desc = "Remove search highlights" })
+
+-- LSP Bindings are in autocommands.lua
