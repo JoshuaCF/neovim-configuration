@@ -8,3 +8,5 @@ vim.keymap.set("n", "<Leader>x", ":bp|bd#<CR>",
 vim.keymap.set("n", "<Leader>X", ":bp|bd!#<CR>",
 	{ desc = "Force close the current buffer and move previous buffer into window" }
 )
+
+vim.keymap.set("n", "<ESC>", ":noh<CR>", { desc = "Remove search highlights" })
