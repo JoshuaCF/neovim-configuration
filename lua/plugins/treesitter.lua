@@ -6,5 +6,6 @@ return {
 			incremental_selection = { enable = true },
 		},
 		main = "nvim-treesitter.configs",
+		build = ":TSUpdate",
 	}
 }
