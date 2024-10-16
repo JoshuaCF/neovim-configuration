@@ -13,6 +13,11 @@ return {
 		},
 		opts = {
 			popup_border_style = "rounded", -- "double", "none", "rounded", "shadow", "single" or "solid"
+			filesystem = {
+				filtered_items = {
+					hide_dotfiles = false
+				}
+			}
 		},
 	}
 }
