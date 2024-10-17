@@ -29,5 +29,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if client.server_capabilities.hoverProvider then
 			vim.keymap.set("n", "<Leader>lh", vim.lsp.buf.hover, { buffer = bufnr, desc = "Hover popup" })
 		end
+		if client.server_capabilities.codeActionProvider then
+			vim.keymap.set("n", "<Leader>la", vim.lsp.buf.code_action, { buffer = bufnr, desc = "Perform code action" })
+		end
+		if client.server_capabilities.renameProvider then
+			vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.rename, { buffer = bufnr, desc = "Rename" })
+		end
 	end,
 })
