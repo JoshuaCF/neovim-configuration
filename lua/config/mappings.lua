@@ -1,4 +1,6 @@
--- LSP Bindings are in autocommands.lua
+-- Bindings dependent on LSP provided functionality are in autocommands.lua
+-- Related commands that aren't LSP specific are here
+vim.keymap.set("n", "<Leader>ls", vim.diagnostic.open_float, { desc = "Show diagnostics" })
 
 -- Misc mappings
 vim.keymap.set("n", "<Leader>tl", function()
@@ -29,21 +31,4 @@ vim.keymap.set("v", "<Leader>'", "<Esc>`>a'<Esc>`<lt>i'<Esc>",
 )
 vim.keymap.set("v", "<Leader>\"", "<Esc>`>a\"<Esc>`<lt>i\"<Esc>",
 	{ desc = "Surround selection with double quotes" }
-)
-
--- Paired insert mappings
-vim.keymap.set("n", "<Leader>(", "i()<Esc>i",
-	{ desc = "Insert paired parentheses" }
-)
-vim.keymap.set("n", "<Leader>[", "i[]<Esc>i",
-	{ desc = "Insert paired square brackets" }
-)
-vim.keymap.set("n", "<Leader>{", "i{}<Esc>i",
-	{ desc = "Insert paired curly brackets" }
-)
-vim.keymap.set("n", "<Leader>'", "i''<Esc>i",
-	{ desc = "Insert paired single quotes" }
-)
-vim.keymap.set("n", "<Leader>\"", "i\"\"<Esc>i",
-	{ desc = "Insert paired double quotes" }
 )
