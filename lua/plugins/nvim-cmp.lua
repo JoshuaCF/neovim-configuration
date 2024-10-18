@@ -11,33 +11,36 @@ return {
 		keys = {
 			{ "<Tab>",
 				function()
+					vim.print("Tab pressed")
 					local cmp = require("cmp")
 					if cmp.visible() then
-						cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+						vim.print("Moving cmp selection")
+						return "<Cmd>lua require('cmp').select_next_item({ behavior = require('cmp').SelectBehavior.Select })<CR>"
 					else
+						vim.print("Just typing tab")
 						return "<Tab>"
 					end
-				end, mode = "i", desc = "Select next completion"
+				end, mode = "i", desc = "Select next completion", expr = true
 			},
 			{ "<S-Tab>",
 				function()
 					local cmp = require("cmp")
 					if cmp.visible() then
-						cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })
+						return "<Cmd>lua require('cmp').select_prev_item({ behavior = require('cmp').SelectBehavior.Select })<CR>"
 					else
 						return "<S-Tab>"
 					end
-				end, mode = "i", desc = "Select prev completion"
+				end, mode = "i", desc = "Select prev completion", expr = true
 			},
 			{ "<S-CR>",
 				function()
 					local cmp = require("cmp")
 					if cmp.visible() then
-						cmp.confirm()
+						return "<Cmd>lua require('cmp').confirm()<CR>"
 					else
 						return "<S-CR>"
 					end
-				end, mode = "i", desc = "Confirm completion"
+				end, mode = "i", desc = "Confirm completion", expr = true
 			},
 			{ "<C-CR>",
 				function()
