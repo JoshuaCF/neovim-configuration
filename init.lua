@@ -7,4 +7,5 @@ require("config.vars")
 require("config.mappings")
 require("config.autocommands")
 
-vim.cmd("colorscheme habamax")
+vim.cmd("colorscheme catppuccin")
+vim.cmd("highlight Conditional cterm=NONE gui=NONE") -- Remove italics from conditionals, I don't like it
