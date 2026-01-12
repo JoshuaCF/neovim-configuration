@@ -5,7 +5,8 @@ return {
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		for _,v in pairs(servers) do
-			require("lspconfig")[v].setup({ capabilities = capabilities })
+			vim.lsp.config(v, { capabilities = capabilities })
+			vim.lsp.enable(v)
 		end
 	end
 }

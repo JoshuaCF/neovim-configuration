@@ -11,7 +11,6 @@ return {
 		keys = {
 			{ "<Tab>",
 				function()
-					vim.print("Tab pressed")
 					local cmp = require("cmp")
 					if cmp.visible() then
 						vim.print("Moving cmp selection")
