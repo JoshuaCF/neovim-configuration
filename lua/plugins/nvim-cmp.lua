@@ -4,7 +4,6 @@ return {
 		opts = {
 			sources = {
 				{ name = "nvim_lsp" },
-				{ name = "path" } -- Not working as well as I want
 			}
 		},
 		event = "BufEnter",
