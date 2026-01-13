@@ -1,7 +1,3 @@
--- Bindings dependent on LSP provided functionality are in autocommands.lua
--- Related commands that aren't LSP specific are here
-vim.keymap.set("n", "<Leader>ls", vim.diagnostic.open_float, { desc = "Show diagnostics" })
-
 -- Misc mappings
 vim.keymap.set("n", "<Leader>tl", function()
 	vim.opt.relativenumber = not vim.opt.relativenumber:get()

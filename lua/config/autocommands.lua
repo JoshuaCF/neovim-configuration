@@ -35,5 +35,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if client.server_capabilities.renameProvider then
 			vim.keymap.set("n", "<Leader>lr", vim.lsp.buf.rename, { buffer = bufnr, desc = "Rename" })
 		end
+		vim.keymap.set("n", "<Leader>ls", vim.diagnostic.open_float, { buffer = bufnr, desc = "Show diagnostics" })
 	end,
 })
