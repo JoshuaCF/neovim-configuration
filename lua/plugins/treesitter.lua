@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter", opts = {
-			ensure_installed = { "rust", "lua", "c", "cpp" },
+			ensure_installed = { "rust", "lua", "c", "cpp", "vim", "regex", "bash", "markdown", "markdown_inline" },
 			highlight = { enable = true },
 			incremental_selection = { enable = true },
 		},
