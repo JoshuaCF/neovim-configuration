@@ -1,5 +1,5 @@
 -- Misc mappings
-vim.keymap.set("n", "<Leader>tl", function()
+vim.keymap.set("n", "<Leader>r", function()
 	vim.opt.relativenumber = not vim.opt.relativenumber:get()
 end, { desc = "Toggle relative line numbers" })
 vim.keymap.set("n", "<Esc>", ":noh<CR>", { desc = "Remove search highlights" })
