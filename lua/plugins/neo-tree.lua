@@ -20,14 +20,7 @@ local fuzzy_file_search_substitute = function()
 				local entry = telescope_state.get_selected_entry()
 				actions.close(prompt_bufnr)
 				reveal_file(entry.cwd .. "/" .. entry[1])
-				-- Jank, but seemingly necessary. After revealing the file, the Neotree state doesn't immediately
-				-- update, and so even though the new state is fetched here, it won't work. Perhaps due to
-				-- needing to load the filesystem or something like that?
-				-- 50 milliseconds seemed to be a robust enough delay and is hardly noticeable
-				vim.defer_fn(function()
-					local nt_state = require("neo-tree.sources.manager").get_state("filesystem", nil, nil)
-					nt_state.commands.open(nt_state)
-				end, 50)
+				vim.cmd("edit " .. entry[1])
 			end, { desc = "Edit and reveal in Neotree" })
 
 			map({"i", "n"}, "<S-CR>", function(prompt_bufnr)
