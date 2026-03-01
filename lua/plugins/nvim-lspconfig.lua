@@ -1,4 +1,5 @@
-local servers = { "lua_ls", "clangd", "rust_analyzer", "asm_lsp", "ts_ls" }
+local servers = { "lua_ls", "clangd", "rust_analyzer", "asm_lsp", "ts_ls", "angularls", "jsonls" }
+
 return {
 	"neovim/nvim-lspconfig",
 	branch = "master",
